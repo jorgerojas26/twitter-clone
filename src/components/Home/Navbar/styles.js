@@ -6,6 +6,7 @@ export const Nav = styled.nav``;
 export const NavLogoContainer = styled.div`
     display: flex;
     justify-content: center;
+
     padding: 0;
     margin: 0;
     margin-top: 10px;
