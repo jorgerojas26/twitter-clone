@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import GlobalStyle from 'globalStyles';
 
@@ -7,10 +8,19 @@ import HomePage from 'pages/Home';
 
 function App() {
     return (
-        <div className="App">
-            <GlobalStyle />
-            <HomePage />
-        </div>
+        <BrowserRouter>
+            <div className="App">
+                <GlobalStyle />
+                <Switch>
+                    <Route exact path="/">
+                        <LoginPage />
+                    </Route>
+                    <Route path="/home">
+                        <HomePage />
+                    </Route>
+                </Switch>
+            </div>
+        </BrowserRouter>
     );
 }
 export default App;

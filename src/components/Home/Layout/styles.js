@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { breakpoints } from 'styles/theme';
 
 export const StyledContainer = styled.div`
     height: 100vh;
@@ -8,7 +9,7 @@ export const StyledContainer = styled.div`
         justify-content: center;
     }
 
-    @media (max-width: 500px) {
+    @media (max-width: ${breakpoints.mobile}) {
         flex-direction: column-reverse;
         justify-content: center;
     }
