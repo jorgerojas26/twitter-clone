@@ -7,6 +7,8 @@ export const StyledHeader = styled.header`
     display: flex;
     flex-grow: 0.3;
     justify-content: center;
+    background: green;
+
     @media (min-width: ${breakpoints.mobile}) {
         justify-content: flex-end;
     }
@@ -32,6 +34,7 @@ export const StyledTimelineContainer = styled.div`
     width: 100%;
     max-width: 600px;
     border-right: 1px solid ${colors.extraLightGray};
+    background: blue;
 `;
 
 export const StyledTrendingContainer = styled.div`
@@ -59,7 +62,6 @@ export const StyledMain = styled.main`
 
     @media (max-width: 500px) {
         height: 100%;
-        width: 100%;
     }
 
     @media (min-width: 705px) {
@@ -70,6 +72,7 @@ export const StyledMain = styled.main`
         max-width: 920px;
         ${StyledTrendingContainer} {
             display: flex;
+            background: red;
         }
     }
 
@@ -79,11 +82,11 @@ export const StyledMain = styled.main`
 `;
 
 export const StyledContainer = styled.div`
-    height: 100vh;
     display: flex;
+    flex-direction: column-reverse;
+    height: 100vh;
 
-    @media (max-width: ${breakpoints.mobile}) {
-        flex-direction: column-reverse;
-        width: 100vw;
+    @media (min-width: ${breakpoints.mobile}) {
+        flex-direction: row;
     }
 `;
