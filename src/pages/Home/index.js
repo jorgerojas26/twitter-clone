@@ -6,8 +6,13 @@ import Layout from 'components/Home/Layout';
 const Home = () => {
     return (
         <Layout>
-            <Navbar />
-            <Main>main content</Main>
+            <Layout.Header>
+                <Navbar />
+            </Layout.Header>
+            <Layout.Main>
+                <Layout.Main.TimelineContainer>timeline</Layout.Main.TimelineContainer>
+                <Layout.Main.TrendingContainer>trending container</Layout.Main.TrendingContainer>
+            </Layout.Main>
         </Layout>
     );
 };

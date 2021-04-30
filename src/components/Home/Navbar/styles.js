@@ -36,7 +36,6 @@ export const NavMenu = styled.ul`
     margin: 0;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
 
     @media (min-width: ${breakpoints.mobile}) {
         flex-direction: column;
@@ -45,10 +44,15 @@ export const NavMenu = styled.ul`
 `;
 
 export const NavLink = styled.a`
+    display: flex;
     border-radius: 9999px;
     transition: background 0.2s;
     cursor: pointer;
-    padding: 12px 0;
+
+    @media (min-width: ${breakpoints.mobile}) {
+        padding: 12px;
+    }
+
     :hover {
         background: ${colors.lightPrimary};
 
@@ -57,24 +61,29 @@ export const NavLink = styled.a`
             stroke-width: 1px;
         }
     }
+
+    :active {
+        > svg {
+            fill: ${colors.primary};
+        }
+    }
 `;
 
 export const NavContainer = styled.div`
     display: flex;
-
-    flex-grow: 1;
+    width: 100%;
+    height: 100%;
 
     @media (min-width: ${breakpoints.mobile}) {
         flex-direction: column;
         width: 68px;
+        padding-left: 4px;
+        padding-right: 4px;
     }
 
     @media (min-width: 618px) {
         width: 88px;
+        padding-left: 12px;
+        padding-right: 12px;
     }
-`;
-export const Header = styled.header`
-    border-right: 1px solid ${colors.extraLightGray};
-
-    display: flex;
 `;

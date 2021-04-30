@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { colors } from 'styles/theme';
+
 export const StyledMain = styled.main`
     display: flex;
     flex-shrink: 1;
@@ -9,14 +10,12 @@ export const StyledMain = styled.main`
     width: 100%;
     max-width: 600px;
 
-    background: green;
-
-    @media (min-width: 705px) {
-        flex-grow: 2;
-    }
-
     @media (max-width: 500px) {
         height: 100%;
         width: 100%;
+    }
+
+    @media (min-width: 705px) {
+        flex-grow: 2;
     }
 `;
