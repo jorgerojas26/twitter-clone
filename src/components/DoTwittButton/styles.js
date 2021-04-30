@@ -5,7 +5,6 @@ export const ButtonContainer = styled.div`
     border-radius: 50%;
     background: ${colors.primary};
     padding: 13px;
-    margin: 15px 0;
     cursor: pointer;
 
     :hover {

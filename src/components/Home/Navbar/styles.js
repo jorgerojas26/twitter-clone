@@ -1,20 +1,26 @@
 import styled from 'styled-components';
-import { colors } from 'styles/theme';
+import { colors, breakpoints } from 'styles/theme';
 
-export const Nav = styled.nav``;
+export const Nav = styled.nav`
+    width: 100%;
+    margin-top: 10px;
+`;
 
 export const NavLogoContainer = styled.div`
-    display: flex;
-    justify-content: center;
+    display: none;
 
-    padding: 0;
-    margin: 0;
-    margin-top: 10px;
-    cursor: pointer;
+    @media (min-width: ${breakpoints.mobile}) {
+        display: flex;
+        justify-content: center;
+        place-items: center;
+        place-content: center;
+        cursor: pointer;
+        margin-top: 10px;
 
-    :hover > svg {
-        border-radius: 9999px;
-        background: ${colors.lightPrimary};
+        :hover > svg {
+            border-radius: 9999px;
+            background: ${colors.lightPrimary};
+        }
     }
 `;
 
@@ -29,20 +35,20 @@ export const NavMenu = styled.ul`
     padding: 0;
     margin: 0;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
 
-    @media (max-width: 500px) {
-        width: 100%;
-        background: blue;
-        flex-direction: row;
+    @media (min-width: ${breakpoints.mobile}) {
+        flex-direction: column;
+        align-items: center;
     }
 `;
 
 export const NavLink = styled.a`
     border-radius: 9999px;
-    padding: 10px;
     transition: background 0.2s;
     cursor: pointer;
+    padding: 12px 0;
     :hover {
         background: ${colors.lightPrimary};
 
@@ -57,7 +63,11 @@ export const NavContainer = styled.div`
     display: flex;
 
     flex-grow: 1;
-    width: 68px;
+
+    @media (min-width: ${breakpoints.mobile}) {
+        flex-direction: column;
+        width: 68px;
+    }
 
     @media (min-width: 618px) {
         width: 88px;

@@ -11,6 +11,6 @@ export const StyledContainer = styled.div`
 
     @media (max-width: ${breakpoints.mobile}) {
         flex-direction: column-reverse;
-        justify-content: center;
+        width: 100vw;
     }
 `;

@@ -17,5 +17,6 @@ export const StyledMain = styled.main`
 
     @media (max-width: 500px) {
         height: 100%;
+        width: 100%;
     }
 `;
