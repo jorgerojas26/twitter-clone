@@ -10,7 +10,10 @@ const Home = () => {
                 <Navbar />
             </Layout.Header>
             <Layout.Main>
-                <Layout.Main.TimelineContainer>timeline</Layout.Main.TimelineContainer>
+                <Layout.Main.TimelineContainer>
+                    <Layout.Main.TimelineContainer.Header>INICIO</Layout.Main.TimelineContainer.Header>
+                    <Layout.Main.TimelineContainer.TwittBoxContainer>DoTwittBox</Layout.Main.TimelineContainer.TwittBoxContainer>
+                </Layout.Main.TimelineContainer>
                 <Layout.Main.TrendingContainer>trending container</Layout.Main.TrendingContainer>
             </Layout.Main>
         </Layout>
