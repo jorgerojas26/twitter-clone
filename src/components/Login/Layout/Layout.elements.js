@@ -31,9 +31,8 @@ export const StyledContainer = styled.div`
     flex-direction: column;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 
-    @media (min-width: ${breakpoints.tablet}) {
+    @media (min-width: ${breakpoints.desktop}) {
         flex-direction: row-reverse;
-        height: 100%;
     }
 `;
 
@@ -50,7 +49,7 @@ export const StyledMainContent = styled.main`
             font-size: 24px;
         }
     }
-    @media (min-width: ${breakpoints.tablet}) {
+    @media (min-width: ${breakpoints.desktop}) {
         margin: 10px auto 0 0;
         display: flex;
         flex-direction: column;
@@ -66,7 +65,7 @@ export const StyledBackgroundImageContainer = styled.div`
     display: flex;
     place-content: center;
     flex: 0.9;
-    @media (min-width: ${breakpoints.tablet}) {
+    @media (min-width: ${breakpoints.desktop}) {
         height: 100vh;
         padding: 0;
         margin: 0;
@@ -81,7 +80,7 @@ export const StyledBackgroundImageContainer = styled.div`
 export const StyledFormContainer = styled.div`
     display: none;
 
-    @media (min-width: ${breakpoints.tablet}) {
+    @media (min-width: ${breakpoints.desktop}) {
         display: flex;
         margin-top: 10px;
         margin-bottom: 90px;
