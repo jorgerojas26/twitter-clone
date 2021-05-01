@@ -13,48 +13,48 @@ const Navbar = () => {
     return (
         <NavContainer>
             <NavLogoContainer>
-                <TwitterLogo fill={colors.primary} width="30px" />
+                <TwitterLogo fill={colors.primary} width='30px' />
             </NavLogoContainer>
             <Nav>
                 <NavMenu>
                     <NavItem>
                         <NavLink>
-                            <HomeIcon width="24px" fill="white" stroke="black" stroke-width="1.5px" />
+                            <HomeIcon width='24px' fill='white' stroke='black' stroke-width='1.5px' />
                         </NavLink>
                     </NavItem>
                     <NavItem>
                         <NavLink>
-                            <ExploreIcon fill="white" stroke="black" stroke-width="1px" width="24px" />
+                            <ExploreIcon fill='white' stroke='black' stroke-width='1px' width='24px' />
                         </NavLink>
                     </NavItem>
                     <NavItem>
                         <NavLink>
-                            <BellIcon fill="white" stroke="black" stroke-width="1px" width="24px" />
+                            <BellIcon fill='white' stroke='black' stroke-width='1px' width='24px' />
                         </NavLink>
                     </NavItem>
                     <NavItem>
                         <NavLink>
-                            <MessageIcon fill="white" stroke="black" stroke-width="1px" width="24px" />
+                            <MessageIcon fill='white' stroke='black' stroke-width='1px' width='24px' />
                         </NavLink>
                     </NavItem>
                     <NavItem>
                         <NavLink>
-                            <SavedIcon fill="black" width="24px" />
+                            <SavedIcon fill='black' width='24px' />
                         </NavLink>
                     </NavItem>
                     <NavItem>
                         <NavLink>
-                            <ListIcon fill="black" width="24px" />
+                            <ListIcon fill='black' width='24px' />
                         </NavLink>
                     </NavItem>
                     <NavItem>
                         <NavLink>
-                            <ProfileIcon fill="black" width="24px" />
+                            <ProfileIcon fill='black' width='24px' />
                         </NavLink>
                     </NavItem>
                     <NavItem>
                         <NavLink>
-                            <MoreOptionsIcon fill="black" width="24px" />
+                            <MoreOptionsIcon fill='black' width='24px' />
                         </NavLink>
                     </NavItem>
                     <NavItem>
