@@ -31,6 +31,7 @@ export const StyledHeader = styled.header`
 
 export const StyledTimelineContainer = styled.div`
     display: flex;
+    flex-direction: column;
     width: 100%;
     max-width: 600px;
     border-right: 1px solid ${colors.extraLightGray};
@@ -81,6 +82,20 @@ export const StyledMain = styled.main`
     }
 `;
 
+export const StyledMainHeader = styled.div`
+    height: 53px;
+    width: 100%;
+    color: white;
+    background: black;
+    border-bottom: 1px solid ${colors.extraLightGray};
+`;
+
+export const StyledDoTwittBox = styled.div`
+    height: 169px;
+    width: 100%;
+    background: pink;
+    border-bottom: 1px solid ${colors.extraLightGray};
+`;
 export const StyledContainer = styled.div`
     display: flex;
     flex-direction: column-reverse;
