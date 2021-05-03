@@ -1,20 +1,37 @@
 import React from 'react';
 import Navbar from 'components/Home/Navbar';
-import Layout from 'components/Home/Layout';
+
+import {
+    Layout,
+    Header,
+    TimelineContainer,
+    TimelineHeader,
+    WidgetContainer,
+    Main,
+    MainWrapper,
+    MainSeparator,
+    DoTwittBox,
+    TwittListContainer,
+} from 'components/Home/Layout';
 
 const Home = () => {
     return (
         <Layout>
-            <Layout.Header>
+            <Header>
                 <Navbar />
-            </Layout.Header>
-            <Layout.Main>
-                <Layout.Main.TimelineContainer>
-                    <Layout.Main.TimelineContainer.Header>INICIO</Layout.Main.TimelineContainer.Header>
-                    <Layout.Main.TimelineContainer.TwittBoxContainer>DoTwittBox</Layout.Main.TimelineContainer.TwittBoxContainer>
-                </Layout.Main.TimelineContainer>
-                <Layout.Main.TrendingContainer>trending container</Layout.Main.TrendingContainer>
-            </Layout.Main>
+            </Header>
+            <Main>
+                <MainWrapper>
+                    <MainSeparator>
+                        <TimelineContainer>
+                            <TimelineHeader>INICIO</TimelineHeader>
+                            <DoTwittBox>DoTwittBox</DoTwittBox>
+                            <TwittListContainer>Twitt List</TwittListContainer>
+                        </TimelineContainer>
+                        <WidgetContainer>widget container</WidgetContainer>
+                    </MainSeparator>
+                </MainWrapper>
+            </Main>
         </Layout>
     );
 };

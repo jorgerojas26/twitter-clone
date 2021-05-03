@@ -1,9 +1,24 @@
 import React from 'react';
 
-import { NavContainer, Nav, NavItem, NavLink, NavMenu, NavLogoContainer } from './styles';
 import TwitterLogo from 'components/TwitterLogo';
 
 import { colors } from 'styles/theme';
+
+import {
+    WidthManager,
+    MainWrapper,
+    NavProfileSeparator,
+    NavWrapper,
+    LogoContainer,
+    NavContainer,
+    DoTwittButtonContainer,
+    Nav,
+    NavLink,
+    NavLinkContentWrapper,
+    IconContainer,
+    NavLinkTextContainer,
+    NavLinkText,
+} from './styles';
 
 import { HomeIcon, ExploreIcon, BellIcon, MessageIcon, SavedIcon, ListIcon, ProfileIcon, MoreOptionsIcon } from 'components/Home/NavbarIcons';
 
@@ -11,58 +26,77 @@ import DoTwittButton from 'components/DoTwittButton';
 
 const Navbar = () => {
     return (
-        <NavContainer>
-            <NavLogoContainer>
-                <TwitterLogo fill={colors.primary} width='30px' />
-            </NavLogoContainer>
-            <Nav>
-                <NavMenu>
-                    <NavItem>
+        <WidthManager>
+            <MainWrapper>
+                <NavProfileSeparator>
+                    <NavWrapper>
                         <NavLink>
-                            <HomeIcon width='24px' fill='white' stroke='black' stroke-width='1.5px' />
+                            <NavLinkContentWrapper>
+                                <LogoContainer>
+                                    <TwitterLogo fill={colors.primary} height='30px' />
+                                </LogoContainer>
+                            </NavLinkContentWrapper>
                         </NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink>
-                            <ExploreIcon fill='white' stroke='black' stroke-width='1px' width='24px' />
-                        </NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink>
-                            <BellIcon fill='white' stroke='black' stroke-width='1px' width='24px' />
-                        </NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink>
-                            <MessageIcon fill='white' stroke='black' stroke-width='1px' width='24px' />
-                        </NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink>
-                            <SavedIcon fill='black' width='24px' />
-                        </NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink>
-                            <ListIcon fill='black' width='24px' />
-                        </NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink>
-                            <ProfileIcon fill='black' width='24px' />
-                        </NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink>
-                            <MoreOptionsIcon fill='black' width='24px' />
-                        </NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <DoTwittButton />
-                    </NavItem>
-                </NavMenu>
-            </Nav>
-        </NavContainer>
+                        <NavContainer>
+                            <Nav>
+                                <NavLink>
+                                    <NavLinkContentWrapper>
+                                        <IconContainer>
+                                            <HomeIcon fill='white' stroke='black' stroke-width='1px' height='1.75rem' />
+                                        </IconContainer>
+                                        <NavLinkTextContainer>
+                                            <NavLinkText>Inicio</NavLinkText>
+                                        </NavLinkTextContainer>
+                                    </NavLinkContentWrapper>
+                                </NavLink>
+                                <NavLink>
+                                    <NavLinkContentWrapper>
+                                        <IconContainer>
+                                            <ExploreIcon fill='white' stroke='black' stroke-width='1px' height='1.75rem' />
+                                        </IconContainer>
+                                        <NavLinkTextContainer>
+                                            <NavLinkText>Explorar</NavLinkText>
+                                        </NavLinkTextContainer>
+                                    </NavLinkContentWrapper>
+                                </NavLink>
+                                <NavLink>
+                                    <NavLinkContentWrapper>
+                                        <IconContainer>
+                                            <BellIcon fill='white' stroke='black' stroke-width='1px' height='1.75rem' />
+                                        </IconContainer>
+                                        <NavLinkTextContainer>
+                                            <NavLinkText>Notificaciones</NavLinkText>
+                                        </NavLinkTextContainer>
+                                    </NavLinkContentWrapper>
+                                </NavLink>
+                                <NavLink>
+                                    <NavLinkContentWrapper>
+                                        <IconContainer>
+                                            <MessageIcon fill='white' stroke='black' stroke-width='1px' height='1.75rem' />
+                                        </IconContainer>
+                                        <NavLinkTextContainer>
+                                            <NavLinkText>Mensajes</NavLinkText>
+                                        </NavLinkTextContainer>
+                                    </NavLinkContentWrapper>
+                                </NavLink>
+                                <NavLink>
+                                    <NavLinkContentWrapper>
+                                        <IconContainer>
+                                            <SavedIcon height='1.75rem' />
+                                        </IconContainer>
+                                        <NavLinkTextContainer>
+                                            <NavLinkText>Guardados</NavLinkText>
+                                        </NavLinkTextContainer>
+                                    </NavLinkContentWrapper>
+                                </NavLink>
+                            </Nav>
+                        </NavContainer>
+                        <DoTwittButtonContainer></DoTwittButtonContainer>
+                    </NavWrapper>
+                    <div>Profile</div>
+                </NavProfileSeparator>
+            </MainWrapper>
+        </WidthManager>
     );
 };
 

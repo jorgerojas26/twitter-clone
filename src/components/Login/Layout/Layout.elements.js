@@ -65,6 +65,7 @@ export const StyledBackgroundImageContainer = styled.div`
     display: flex;
     place-content: center;
     flex: 0.9;
+
     @media (min-width: ${breakpoints.desktop}) {
         height: 100vh;
         padding: 0;
