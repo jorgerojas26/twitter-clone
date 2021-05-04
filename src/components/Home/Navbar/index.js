@@ -20,7 +20,17 @@ import {
     NavLinkText,
 } from './styles';
 
-import { HomeIcon, ExploreIcon, BellIcon, MessageIcon, SavedIcon, ListIcon, ProfileIcon, MoreOptionsIcon } from 'components/Home/NavbarIcons';
+import {
+    HomeIcon,
+    ExploreIcon,
+    BellIcon,
+    MessageIcon,
+    SavedIcon,
+    ListIcon,
+    ProfileIcon,
+    MoreOptionsIcon,
+    HashtagIcon,
+} from 'components/Home/NavbarIcons';
 
 import DoTwittButton from 'components/DoTwittButton';
 
@@ -51,8 +61,9 @@ const Navbar = () => {
                                 </NavLink>
                                 <NavLink>
                                     <NavLinkContentWrapper>
-                                        <IconContainer>
+                                        <IconContainer iconVariant>
                                             <ExploreIcon fill='transparent' stroke='black' height='24px' />
+                                            <HashtagIcon fill='transparent' stroke='black' height='24px' />
                                         </IconContainer>
                                         <NavLinkTextContainer>
                                             <NavLinkText>Explorar</NavLinkText>

@@ -16,6 +16,7 @@ export const TimelineContainer = styled.div`
     width: 100%;
     max-width: 600px;
     border-right: 1px solid ${colors.extraLightGray};
+    border-left: 1px solid ${colors.extraLightGray};
 `;
 
 export const WidgetContainer = styled.div`
@@ -89,8 +90,6 @@ export const MainSeparator = styled.div`
 export const TimelineHeader = styled.div`
     height: 53px;
     width: 100%;
-    color: white;
-    background: black;
     border-bottom: 1px solid ${colors.extraLightGray};
 `;
 
@@ -101,14 +100,12 @@ export const DoTwittBox = styled.div`
         display: flex;
         height: 169px;
         width: 100%;
-        background: pink;
         border-bottom: 1px solid ${colors.extraLightGray};
     }
 `;
 
 export const TwittListContainer = styled.div`
     display: flex;
-    background: purple;
     height: 100%;
     width: 100%;
     border-top: 1px solid ${colors.extraLightGray};

@@ -176,6 +176,28 @@ display: none;
 
 export const IconContainer = styled.div`
     display: inline-block;
+
+    ${(props) => {
+        if (props.iconVariant) {
+            return `
+
+            > :nth-child(2){
+                display: none;
+            }
+
+            @media (min-width: 988px){
+                > :nth-child(1){
+                display: none;
+            }
+
+            > :nth-child(2){
+                display: flex;
+            }
+
+            }
+            `;
+        }
+    }}
 `;
 
 export const NavLinkContentWrapper = styled.div`

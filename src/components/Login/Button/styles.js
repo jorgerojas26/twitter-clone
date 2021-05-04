@@ -18,7 +18,7 @@ export const StyledButton = styled.div`
     background: ${(props) => (props.primary ? colors.primary : 'none')};
 
     &:hover {
-        background-color: ${colors.lightPrimary}}
+        background-color: ${colors.lightPrimary}
         transition: background-color 0.3s;
     }
 
