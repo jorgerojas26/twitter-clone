@@ -42,7 +42,7 @@ const Navbar = () => {
                                 <NavLink>
                                     <NavLinkContentWrapper>
                                         <IconContainer>
-                                            <HomeIcon fill='white' stroke='black' stroke-width='1px' height='1.75rem' />
+                                            <HomeIcon fill='transparent' stroke='black' height='24px' />
                                         </IconContainer>
                                         <NavLinkTextContainer>
                                             <NavLinkText>Inicio</NavLinkText>
@@ -52,7 +52,7 @@ const Navbar = () => {
                                 <NavLink>
                                     <NavLinkContentWrapper>
                                         <IconContainer>
-                                            <ExploreIcon fill='white' stroke='black' stroke-width='1px' height='1.75rem' />
+                                            <ExploreIcon fill='transparent' stroke='black' height='24px' />
                                         </IconContainer>
                                         <NavLinkTextContainer>
                                             <NavLinkText>Explorar</NavLinkText>
@@ -62,7 +62,7 @@ const Navbar = () => {
                                 <NavLink>
                                     <NavLinkContentWrapper>
                                         <IconContainer>
-                                            <BellIcon fill='white' stroke='black' stroke-width='1px' height='1.75rem' />
+                                            <BellIcon fill='transparent' stroke='black' height='24px' />
                                         </IconContainer>
                                         <NavLinkTextContainer>
                                             <NavLinkText>Notificaciones</NavLinkText>
@@ -72,26 +72,58 @@ const Navbar = () => {
                                 <NavLink>
                                     <NavLinkContentWrapper>
                                         <IconContainer>
-                                            <MessageIcon fill='white' stroke='black' stroke-width='1px' height='1.75rem' />
+                                            <MessageIcon fill='transparent' stroke='black' height='24px' />
                                         </IconContainer>
                                         <NavLinkTextContainer>
                                             <NavLinkText>Mensajes</NavLinkText>
                                         </NavLinkTextContainer>
                                     </NavLinkContentWrapper>
                                 </NavLink>
-                                <NavLink>
+                                <NavLink dissapearOnMobile>
                                     <NavLinkContentWrapper>
                                         <IconContainer>
-                                            <SavedIcon height='1.75rem' />
+                                            <SavedIcon height='24px' />
                                         </IconContainer>
                                         <NavLinkTextContainer>
                                             <NavLinkText>Guardados</NavLinkText>
                                         </NavLinkTextContainer>
                                     </NavLinkContentWrapper>
                                 </NavLink>
+                                <NavLink dissapearOnMobile>
+                                    <NavLinkContentWrapper>
+                                        <IconContainer>
+                                            <ListIcon height='24px' />
+                                        </IconContainer>
+                                        <NavLinkTextContainer>
+                                            <NavLinkText>Listas</NavLinkText>
+                                        </NavLinkTextContainer>
+                                    </NavLinkContentWrapper>
+                                </NavLink>
+                                <NavLink dissapearOnMobile>
+                                    <NavLinkContentWrapper>
+                                        <IconContainer>
+                                            <ProfileIcon height='24px' />
+                                        </IconContainer>
+                                        <NavLinkTextContainer>
+                                            <NavLinkText>Perfil</NavLinkText>
+                                        </NavLinkTextContainer>
+                                    </NavLinkContentWrapper>
+                                </NavLink>
+                                <NavLink dissapearOnMobile>
+                                    <NavLinkContentWrapper>
+                                        <IconContainer>
+                                            <MoreOptionsIcon height='24px' />
+                                        </IconContainer>
+                                        <NavLinkTextContainer>
+                                            <NavLinkText>Más opciones</NavLinkText>
+                                        </NavLinkTextContainer>
+                                    </NavLinkContentWrapper>
+                                </NavLink>
                             </Nav>
                         </NavContainer>
-                        <DoTwittButtonContainer></DoTwittButtonContainer>
+                        <DoTwittButtonContainer dissapearOnMobile>
+                            <DoTwittButton>Twittear</DoTwittButton>
+                        </DoTwittButtonContainer>
                     </NavWrapper>
                     <div>Profile</div>
                 </NavProfileSeparator>

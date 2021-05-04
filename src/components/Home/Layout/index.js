@@ -44,7 +44,7 @@ export const Main = styled.main`
     display: flex;
     flex-direction: column;
     flex-shrink: 1;
-    flew-grow: 1;
+    flex-grow: 1;
     height: 100%;
 
     @media (min-width: ${breakpoints.mobile}) {
@@ -53,7 +53,6 @@ export const Main = styled.main`
     }
 
     @media (min-width: 688px) {
-        flex-grow: 2;
         align-items: flex-start;
         width: auto;
     }
@@ -66,7 +65,6 @@ export const MainWrapper = styled.div`
     width: 100%;
 
     @media (min-width: 688px) {
-        flex-grow: 1;
         width: 600px;
     }
 
@@ -97,18 +95,27 @@ export const TimelineHeader = styled.div`
 `;
 
 export const DoTwittBox = styled.div`
-    height: 169px;
-    width: 100%;
-    background: pink;
-    border-bottom: 1px solid ${colors.extraLightGray};
+    display: none;
+
+    @media (min-width: ${breakpoints.mobile}) {
+        display: flex;
+        height: 169px;
+        width: 100%;
+        background: pink;
+        border-bottom: 1px solid ${colors.extraLightGray};
+    }
 `;
 
 export const TwittListContainer = styled.div`
-    margin-top: 10px;
+    display: flex;
     background: purple;
     height: 100%;
     width: 100%;
     border-top: 1px solid ${colors.extraLightGray};
+
+    @media (min-width: ${breakpoints.mobile}) {
+        margin-top: 10px;
+    }
 `;
 
 export const Layout = styled.div`

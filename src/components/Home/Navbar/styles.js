@@ -77,6 +77,8 @@ export const NavWrapper = styled.div`
     }
 `;
 
+export const AccountMenuContainer = styled.div``;
+
 export const LogoContainer = styled.div`
     display: none;
 
@@ -107,6 +109,17 @@ export const NavContainer = styled.div`
 
 export const DoTwittButtonContainer = styled.div`
     display: flex;
+    flex-direction: column;
+    width: 90%;
+    align-items: center;
+    margin: 15px 0;
+
+    @media (max-width: ${breakpoints.mobile}) {
+        ${(props) =>
+            props.dissapearOnMobile && {
+                display: 'none',
+            }}
+    }
 `;
 
 export const Nav = styled.nav`
@@ -151,6 +164,18 @@ export const NavLink = styled.a`
         align-items: flex-start;
         justify-content: flex-start;
     }
+
+    ${(props) =>
+        props.dissapearOnMobile &&
+        `
+@media (max-width: ${breakpoints.mobile}){
+display: none;
+}
+    `}
+`;
+
+export const IconContainer = styled.div`
+    display: inline-block;
 `;
 
 export const NavLinkContentWrapper = styled.div`
@@ -163,13 +188,19 @@ export const NavLinkContentWrapper = styled.div`
     border-radius: 9999px;
     transition-property: background-color, box-shadow;
     transition-duration: 0.2s;
+
     :hover {
         background: ${colors.lightPrimary};
+        color: ${colors.primary}
+        
     }
-`;
 
-export const IconContainer = styled.div`
-    display: inline-block;
+    :hover ${IconContainer}{
+        > svg {
+            stroke: ${colors.primary};
+            stroke-width: 1px;
+        }
+    }
 `;
 
 export const NavLinkTextContainer = styled.div`

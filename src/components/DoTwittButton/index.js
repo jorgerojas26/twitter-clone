@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledDoTwittButton, ButtonContainer, IconContainer } from './styles.js';
+import { StyledDoTwittButton, ButtonContainer, IconContainer, StyledText } from './styles.js';
 import DoTwittIcon from 'components/Home/NavbarIcons/DoTwittIcon';
 
 const DoTwittButton = ({ children, ...rest }) => {
@@ -7,8 +7,9 @@ const DoTwittButton = ({ children, ...rest }) => {
         <ButtonContainer>
             <StyledDoTwittButton {...rest}>
                 <IconContainer>
-                    <DoTwittIcon width="21px" fill="white" />
+                    <DoTwittIcon width='21px' fill='white' />
                 </IconContainer>
+                <StyledText>{children}</StyledText>
             </StyledDoTwittButton>
         </ButtonContainer>
     );
