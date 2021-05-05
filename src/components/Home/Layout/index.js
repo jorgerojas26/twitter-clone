@@ -87,10 +87,59 @@ export const MainSeparator = styled.div`
     min-height: 100%;
 `;
 
-export const TimelineHeader = styled.div`
-    height: 53px;
-    width: 100%;
+export const TimelineHeaderWrapper = styled.div`
+    height: 50px;
     border-bottom: 1px solid ${colors.extraLightGray};
+    padding: 0 15px;
+`;
+
+export const TimelineHeaderContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+`;
+
+export const TimelineHeadingContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 1;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+`;
+
+export const TimelineHeading = styled.h2`
+    font-weight: 800;
+    font-size: 19px;
+`;
+
+export const HelpIconWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    min-height: 30px;
+    align-selft: stretch;
+    justify-content: center;
+    align-items: flex-end;
+`;
+
+export const HelpIconContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 30px;
+    min-width: 30px;
+    border-radius: 9999px;
+    cursor: pointer;
+    :hover {
+        background: ${colors.lightPrimary};
+    }
 `;
 
 export const DoTwittBox = styled.div`

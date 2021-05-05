@@ -247,3 +247,69 @@ export const NavLinkTextContainer = styled.div`
 export const NavLinkText = styled.span`
     overflow-wrap: break-word;
 `;
+
+export const ProfileMenuWrapper = styled.div`
+    margin: 11px 0;
+`;
+
+export const ProfileMenuContainer = styled.div`
+    display: flex;
+    align-items: center;
+    padding: 11px;
+    transition-property: background-color, box-shadow;
+    transition-duration: 0.2s;
+    border-radius: 9999px;
+
+    :hover {
+        background: ${colors.lightPrimary};
+    }
+`;
+
+export const AvatarContainer = styled.div`
+    width: 38px;
+    height: 38px;
+    background: grey;
+    border-radius: 9999px;
+`;
+
+export const UserIDWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+`;
+export const UserIDContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin: 0 11px;
+`;
+
+export const UserFullNameContainer = styled.div`
+    font-size: 14px;
+    font-weight: 700;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+`;
+export const UsernameContainer = styled.div`
+    font-size: 14px;
+    font-weight: 400;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: ${colors.darkGray};
+`;
+
+export const UserFullNameText = styled.span`
+    //css
+`;
+
+export const UsernameText = styled.span`
+    //css
+`;
+
+export const ThreeDotsIconContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 1;
+    align-items: flex-end;
+    max-width: 100%;
+`;

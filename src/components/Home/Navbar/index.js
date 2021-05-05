@@ -18,6 +18,16 @@ import {
     IconContainer,
     NavLinkTextContainer,
     NavLinkText,
+    ProfileMenuWrapper,
+    ProfileMenuContainer,
+    AvatarContainer,
+    UserIDWrapper,
+    UserIDContainer,
+    UserFullNameContainer,
+    UsernameContainer,
+    UserFullNameText,
+    UsernameText,
+    ThreeDotsIconContainer,
 } from './styles';
 
 import {
@@ -30,6 +40,7 @@ import {
     ProfileIcon,
     MoreOptionsIcon,
     HashtagIcon,
+    ThreeDotsIcon,
 } from 'components/Home/NavbarIcons';
 
 import DoTwittButton from 'components/DoTwittButton';
@@ -136,7 +147,24 @@ const Navbar = () => {
                             <DoTwittButton>Twittear</DoTwittButton>
                         </DoTwittButtonContainer>
                     </NavWrapper>
-                    <div>Profile</div>
+                    <ProfileMenuWrapper>
+                        <ProfileMenuContainer>
+                            <AvatarContainer></AvatarContainer>
+                            <UserIDWrapper>
+                                <UserIDContainer>
+                                    <UserFullNameContainer>
+                                        <UserFullNameContainer>Jorge Rojas</UserFullNameContainer>
+                                    </UserFullNameContainer>
+                                    <UsernameContainer>
+                                        <UsernameText>@Jorgerojas266</UsernameText>
+                                    </UsernameContainer>
+                                </UserIDContainer>
+                            </UserIDWrapper>
+                            <ThreeDotsIconContainer>
+                                <ThreeDotsIcon height='24px' />
+                            </ThreeDotsIconContainer>
+                        </ProfileMenuContainer>
+                    </ProfileMenuWrapper>
                 </NavProfileSeparator>
             </MainWrapper>
         </WidthManager>

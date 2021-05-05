@@ -5,7 +5,12 @@ import {
     Layout,
     Header,
     TimelineContainer,
-    TimelineHeader,
+    TimelineHeaderWrapper,
+    TimelineHeaderContainer,
+    TimelineHeadingContainer,
+    TimelineHeading,
+    HelpIconWrapper,
+    HelpIconContainer,
     WidgetContainer,
     Main,
     MainWrapper,
@@ -13,6 +18,10 @@ import {
     DoTwittBox,
     TwittListContainer,
 } from 'components/Home/Layout';
+
+import { StarsIcon } from 'components/Home/NavbarIcons';
+
+import { colors } from 'styles/theme';
 
 const Home = () => {
     return (
@@ -24,8 +33,19 @@ const Home = () => {
                 <MainWrapper>
                     <MainSeparator>
                         <TimelineContainer>
-                            <TimelineHeader>INICIO</TimelineHeader>
-                            <DoTwittBox>DoTwittBox</DoTwittBox>
+                            <TimelineHeaderWrapper>
+                                <TimelineHeaderContainer>
+                                    <TimelineHeadingContainer>
+                                        <TimelineHeading>Inicio</TimelineHeading>
+                                    </TimelineHeadingContainer>
+                                    <HelpIconWrapper>
+                                        <HelpIconContainer role='button'>
+                                            <StarsIcon fill={colors.primary} width='1.5em' />
+                                        </HelpIconContainer>
+                                    </HelpIconWrapper>
+                                </TimelineHeaderContainer>
+                            </TimelineHeaderWrapper>
+                            <DoTwittBox></DoTwittBox>
                             <TwittListContainer>Twitt List</TwittListContainer>
                         </TimelineContainer>
                         <WidgetContainer>widget container</WidgetContainer>

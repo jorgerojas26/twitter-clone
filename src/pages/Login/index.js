@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Layout, ButtonsContainer, LogoContainer, HeadingContainer, FormContainer } from 'components/Login/Layout';
-import FloatingLabelInput from 'components/Login/FloatingLabelInput';
+import LabeledInput from 'components/Login/LabeledInput';
 
 import { colors } from 'styles/theme';
 
@@ -15,8 +15,8 @@ const LoginPage = () => {
         <Layout>
             <Layout.MainContent>
                 <FormContainer>
-                    <FloatingLabelInput autoFocus type='text' placeholder='Teléfono, correo o usuario' />
-                    <FloatingLabelInput type='text' placeholder='Contraseña' />
+                    <LabeledInput autoFocus type='text' placeholder='Teléfono, correo o usuario' />
+                    <LabeledInput type='text' placeholder='Contraseña' />
                     <div style={{ margin: 'auto 0', padding: '0' }}>
                         <Button>
                             <GitHubLogo width='24px' />

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { StyledMainWrapper } from './styles';
 
-const FloatingLabelInput = ({ placeholder, ...rest }) => {
+const LabeledInput = ({ placeholder, ...rest }) => {
     const [labelActive, setLabelActive] = useState('');
 
     const handleBlur = ({ target: { value } }) => {
@@ -16,4 +16,4 @@ const FloatingLabelInput = ({ placeholder, ...rest }) => {
     );
 };
 
-export default FloatingLabelInput;
+export default LabeledInput;

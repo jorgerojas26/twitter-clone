@@ -8,4 +8,20 @@ import ProfileIcon from './ProfileIcon';
 import MoreOptionsIcon from './MoreOptionsIcon';
 import DoTwittIcon from './DoTwittIcon';
 import HashtagIcon from './HashtagIcon';
-export { HomeIcon, ExploreIcon, BellIcon, MessageIcon, SavedIcon, ListIcon, ProfileIcon, MoreOptionsIcon, DoTwittIcon, HashtagIcon };
+import StarsIcon from './StarsIcon';
+import ThreeDotsIcon from './ThreeDotsIcon';
+
+export {
+    HomeIcon,
+    ExploreIcon,
+    BellIcon,
+    MessageIcon,
+    SavedIcon,
+    ListIcon,
+    ProfileIcon,
+    MoreOptionsIcon,
+    DoTwittIcon,
+    HashtagIcon,
+    StarsIcon,
+    ThreeDotsIcon,
+};

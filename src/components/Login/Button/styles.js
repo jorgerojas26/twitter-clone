@@ -10,16 +10,13 @@ export const StyledButton = styled.div`
     border: 1px solid;
     border-radius: 9999px;
     cursor: pointer;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
 
     color: ${(props) => (props.primary ? 'white' : colors.primary)};
     background: ${(props) => (props.primary ? colors.primary : 'none')};
 
-    &:hover {
-        background-color: ${colors.lightPrimary}
-        transition: background-color 0.3s;
+    :hover {
+        background: ${colors.lightPrimary};
+        transition: background 0.3s;
     }
 
     & > svg {
