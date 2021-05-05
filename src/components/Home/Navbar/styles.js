@@ -249,67 +249,95 @@ export const NavLinkText = styled.span`
 `;
 
 export const ProfileMenuWrapper = styled.div`
-    margin: 11px 0;
+    display: none;
+
+    @media (min-width: ${breakpoints.mobile}) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 11px 0;
+    }
 `;
 
 export const ProfileMenuContainer = styled.div`
     display: flex;
     align-items: center;
-    padding: 11px;
     transition-property: background-color, box-shadow;
     transition-duration: 0.2s;
     border-radius: 9999px;
-
+    cursor: pointer;
+    padding: 11px;
     :hover {
         background: ${colors.lightPrimary};
     }
+
+    max-width: 100%;
 `;
 
 export const AvatarContainer = styled.div`
-    width: 38px;
-    height: 38px;
+    display: flex;
+    flex-direction: column;
+    min-width: 38px;
+    min-height: 38px;
     background: grey;
     border-radius: 9999px;
 `;
 
 export const UserIDWrapper = styled.div`
-    display: flex;
+    display: none;
     flex-direction: column;
-    max-width: 100%;
+    flex-shrink: 1;
+    min-width: 0px;
+
+    @media (min-width: 1265px) {
+        display: flex;
+    }
 `;
-export const UserIDContainer = styled.div`
+export const UserInfoContainer = styled.div`
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
     flex-shrink: 1;
     margin: 0 11px;
 `;
 
 export const UserFullNameContainer = styled.div`
+    display: inline;
+
     font-size: 14px;
     font-weight: 700;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    overflow-wrap: break-word;
+
+    min-width: 0px;
 `;
 export const UsernameContainer = styled.div`
+    display: inline;
+
     font-size: 14px;
     font-weight: 400;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     color: ${colors.darkGray};
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    overflow-wrap: break-word;
+
+    min-width: 0px;
 `;
 
-export const UserFullNameText = styled.span`
-    //css
-`;
+export const UserFullNameText = styled.span``;
 
-export const UsernameText = styled.span`
-    //css
-`;
+export const UsernameText = styled.span``;
 
 export const ThreeDotsIconContainer = styled.div`
-    display: flex;
-    flex-direction: column;
+    display: none;
     flex-grow: 1;
-    flex-shrink: 1;
     align-items: flex-end;
-    max-width: 100%;
+
+    @media (min-width: 1265px) {
+        display: flex;
+    }
 `;

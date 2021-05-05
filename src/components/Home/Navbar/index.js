@@ -22,7 +22,7 @@ import {
     ProfileMenuContainer,
     AvatarContainer,
     UserIDWrapper,
-    UserIDContainer,
+    UserInfoContainer,
     UserFullNameContainer,
     UsernameContainer,
     UserFullNameText,
@@ -151,14 +151,16 @@ const Navbar = () => {
                         <ProfileMenuContainer>
                             <AvatarContainer></AvatarContainer>
                             <UserIDWrapper>
-                                <UserIDContainer>
+                                <UserInfoContainer>
                                     <UserFullNameContainer>
-                                        <UserFullNameContainer>Jorge Rojas</UserFullNameContainer>
+                                        <UserFullNameContainer>
+                                            <UserFullNameText>Jorge Rojas</UserFullNameText>
+                                        </UserFullNameContainer>
                                     </UserFullNameContainer>
                                     <UsernameContainer>
-                                        <UsernameText>@Jorgerojas266</UsernameText>
+                                        <UsernameText>@Jorgerojas26666666666666666666666666666666666666666666666666666666666</UsernameText>
                                     </UsernameContainer>
-                                </UserIDContainer>
+                                </UserInfoContainer>
                             </UserIDWrapper>
                             <ThreeDotsIconContainer>
                                 <ThreeDotsIcon height='24px' />
