@@ -1,5 +1,7 @@
-import React from 'react';
-import Navbar from 'components/Home/Navbar';
+import { useState } from 'react';
+
+import Navbar from 'components/Navbar';
+import Modal from 'components/Modal';
 
 import {
     Layout,
@@ -17,13 +19,22 @@ import {
     MainSeparator,
     DoTwittBox,
     TwittListContainer,
-} from 'components/Home/Layout';
+} from './Layout';
 
-import { StarsIcon } from 'components/Home/NavbarIcons';
+import { StarsIcon } from 'components/Svg';
 
 import { colors } from 'styles/theme';
 
 const Home = () => {
+    const [showModal, setShowModal] = useState(false);
+
+    const handleClick = () => {
+        setShowModal(true);
+    };
+
+    const closeModal = () => {
+        setShowModal(false);
+    };
     return (
         <Layout>
             <Header>
@@ -36,10 +47,13 @@ const Home = () => {
                             <TimelineHeaderWrapper>
                                 <TimelineHeaderContainer>
                                     <TimelineHeadingContainer>
-                                        <TimelineHeading>Inicio</TimelineHeading>
+                                        <TimelineHeading>
+                                            Inicio
+                                            {/*This text must change on navigation. I'll leave it like that for now*/}
+                                        </TimelineHeading>
                                     </TimelineHeadingContainer>
                                     <HelpIconWrapper>
-                                        <HelpIconContainer role='button'>
+                                        <HelpIconContainer onClick={handleClick} role='button'>
                                             <StarsIcon fill={colors.primary} width='1.5em' />
                                         </HelpIconContainer>
                                     </HelpIconWrapper>
@@ -52,6 +66,9 @@ const Home = () => {
                     </MainSeparator>
                 </MainWrapper>
             </Main>
+            <Modal show={showModal} close={closeModal}>
+                {/*Modal child component*/}
+            </Modal>
         </Layout>
     );
 };

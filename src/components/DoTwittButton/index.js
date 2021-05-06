@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyledDoTwittButton, ButtonContainer, IconContainer, StyledText } from './styles.js';
-import DoTwittIcon from 'components/Home/NavbarIcons/DoTwittIcon';
+
+import { DoTwittIcon } from 'components/Svg';
 
 const DoTwittButton = ({ children, ...rest }) => {
     return (

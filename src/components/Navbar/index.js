@@ -1,6 +1,4 @@
-import React from 'react';
-
-import TwitterLogo from 'components/TwitterLogo';
+import { useState } from 'react';
 
 import { colors } from 'styles/theme';
 
@@ -28,9 +26,11 @@ import {
     UserFullNameText,
     UsernameText,
     ThreeDotsIconContainer,
+    NavMenuWrapper,
 } from './styles';
 
 import {
+    TwitterLogo,
     HomeIcon,
     ExploreIcon,
     BellIcon,
@@ -41,11 +41,25 @@ import {
     MoreOptionsIcon,
     HashtagIcon,
     ThreeDotsIcon,
-} from 'components/Home/NavbarIcons';
+} from 'components/Svg';
 
 import DoTwittButton from 'components/DoTwittButton';
 
+import Modal from 'components/Modal';
+
+import NavMenu from 'components/NavMenu';
+
 const Navbar = () => {
+    const [showModal, setShowModal] = useState(false);
+
+    const openModal = () => {
+        setShowModal(true);
+    };
+
+    const closeModal = () => {
+        setShowModal(false);
+    };
+
     return (
         <WidthManager>
             <MainWrapper>
@@ -132,7 +146,7 @@ const Navbar = () => {
                                     </NavLinkContentWrapper>
                                 </NavLink>
                                 <NavLink dissapearOnMobile>
-                                    <NavLinkContentWrapper>
+                                    <NavLinkContentWrapper onClick={openModal}>
                                         <IconContainer>
                                             <MoreOptionsIcon height='24px' />
                                         </IconContainer>
@@ -169,6 +183,11 @@ const Navbar = () => {
                     </ProfileMenuWrapper>
                 </NavProfileSeparator>
             </MainWrapper>
+            <Modal show={showModal} close={closeModal}>
+                <NavMenuWrapper>
+                    <NavMenu />
+                </NavMenuWrapper>
+            </Modal>
         </WidthManager>
     );
 };

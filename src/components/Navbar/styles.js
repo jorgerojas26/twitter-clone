@@ -341,3 +341,21 @@ export const ThreeDotsIconContainer = styled.div`
         display: flex;
     }
 `;
+
+export const NavMenuWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    position: fixed;
+    top: 48px;
+    background: white;
+    box-shadow: ${colors.shadow} 0px 0px 15px, ${colors.shadow} 0px 0px 3px 1px;
+    border-radius: 4px;
+
+    max-height: calc(100vh -48px);
+    max-width: 336px;
+    width: 223.44px;
+    overscroll-behavior: contain;
+    overflow-y: auto;
+    overflow: hidden;
+`;

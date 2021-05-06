@@ -1,14 +1,14 @@
 import React from 'react';
 
-import { Layout, ButtonsContainer, LogoContainer, HeadingContainer, FormContainer } from 'components/Login/Layout';
-import LabeledInput from 'components/Login/LabeledInput';
+import { Layout, ButtonsContainer, LogoContainer, HeadingContainer, FormContainer } from './Layout';
+
+import LabeledInput from 'components/LabeledInput';
 
 import { colors } from 'styles/theme';
 
-import Button from 'components/Login/Button';
+import Button from 'components/Button';
 
-import TwitterLogo from 'components/TwitterLogo';
-import GitHubLogo from 'components/GitHubLogo';
+import { TwitterLogo, GitHubLogo } from 'components/Svg';
 
 const LoginPage = () => {
     return (

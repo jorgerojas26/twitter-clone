@@ -5,21 +5,18 @@ import GlobalStyle from 'globalStyles';
 
 import LoginPage from 'pages/Login';
 import HomePage from 'pages/Home';
-import Home from 'Example/pages/Home'
+
 function App() {
     return (
         <BrowserRouter>
-            <div className="App">
+            <div className='App'>
                 <GlobalStyle />
                 <Switch>
-                    <Route exact path="/">
+                    <Route exact path='/'>
                         <LoginPage />
                     </Route>
-                    <Route path="/home">
+                    <Route path='/home'>
                         <HomePage />
-                    </Route>
-                    <Route path="/example">
-                        <Home />
                     </Route>
                 </Switch>
             </div>
