@@ -1,7 +1,6 @@
 import * as React from 'react';
 
 function SvgComponent({ active, ...rest }) {
-    console.log(active);
     return (
         <svg viewBox='0 0 24 24' {...rest}>
             {active && (

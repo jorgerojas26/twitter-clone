@@ -22,6 +22,8 @@ import HelpIcon from './HelpIcon';
 import ShowIcon from './ShowIcon';
 import AccesibilityIcon from './AccesibilityIcon';
 import ShowIconComplement from './ShowIconComplement';
+import ColoredStarsIcon from './ColoredStarsIcon';
+import DoubleArrowIcon from './DoubleArrowIcon';
 
 export {
     HomeIcon,
@@ -48,4 +50,6 @@ export {
     AccesibilityIcon,
     GitHubLogo,
     TwitterLogo,
+    ColoredStarsIcon,
+    DoubleArrowIcon,
 };

@@ -146,6 +146,10 @@ export const NavLink = styled.a`
     flex-direction: column;
     flex-grow: 1;
 
+    user-select: none;
+    pointer-events: auto;
+    online-style: none;
+
     justify-content: center;
     align-items: center;
 
@@ -156,7 +160,6 @@ export const NavLink = styled.a`
 
     @media (min-width: ${breakpoints.mobile}) {
         width: 100%;
-        padding: 4px 0;
     }
 
     @media (min-width: 1265px) {
@@ -357,14 +360,15 @@ export const NavMenuWrapper = styled.div`
     flex-direction: column;
     flex-grow: 1;
     position: fixed;
-    top: 70px;
+    top: 42px;
     background: white;
     box-shadow: ${colors.shadow} 0px 0px 15px, ${colors.shadow} 0px 0px 3px 1px;
     border-radius: 4px;
 
-    max-height: calc(100vh -48px);
-    width: 240px;
+    margin-left: 10px;
+    max-width: 366px;
     overscroll-behavior: contain;
     overflow-y: auto;
     overflow: hidden;
+    z-index: 3;
 `;

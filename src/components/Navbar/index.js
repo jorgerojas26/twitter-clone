@@ -89,10 +89,7 @@ const Navbar = () => {
                                         className={activeItem === 'Home' ? 'active' : ''}
                                     >
                                         <IconContainer>
-                                            <HomeIcon
-                                                height='24px'
-                                                active={activeItem === 'Home'}
-                                            />
+                                            <HomeIcon height='24px' active={activeItem === 'Home'} />
                                         </IconContainer>
                                         <NavLinkTextContainer>
                                             <NavLinkText>Inicio</NavLinkText>
@@ -105,14 +102,8 @@ const Navbar = () => {
                                         className={activeItem == 'Explore' ? 'active' : ''}
                                     >
                                         <IconContainer iconVariant>
-                                            <ExploreIcon
-                                                height='24px'
-                                                active={activeItem == 'Explore'}
-                                            />
-                                            <HashtagIcon
-                                                height='24px'
-                                                active={activeItem == 'Explore'}
-                                            />
+                                            <ExploreIcon height='24px' active={activeItem == 'Explore'} />
+                                            <HashtagIcon height='24px' active={activeItem == 'Explore'} />
                                         </IconContainer>
                                         <NavLinkTextContainer>
                                             <NavLinkText>Explorar</NavLinkText>
@@ -125,10 +116,7 @@ const Navbar = () => {
                                         className={activeItem == 'Notifications' ? 'active' : ''}
                                     >
                                         <IconContainer>
-                                            <BellIcon
-                                                height='24px'
-                                                active={activeItem === 'Notifications'}
-                                            />
+                                            <BellIcon height='24px' active={activeItem === 'Notifications'} />
                                         </IconContainer>
                                         <NavLinkTextContainer>
                                             <NavLinkText>Notificaciones</NavLinkText>
@@ -141,10 +129,7 @@ const Navbar = () => {
                                         className={activeItem == 'Messages' ? 'active' : ''}
                                     >
                                         <IconContainer>
-                                            <MessageIcon
-                                                height='24px'
-                                                active={activeItem === 'Messages'}
-                                            />
+                                            <MessageIcon height='24px' active={activeItem === 'Messages'} />
                                         </IconContainer>
                                         <NavLinkTextContainer>
                                             <NavLinkText>Mensajes</NavLinkText>
@@ -157,10 +142,7 @@ const Navbar = () => {
                                         className={activeItem == 'Saved' ? 'active' : ''}
                                     >
                                         <IconContainer>
-                                            <SavedIcon
-                                                height='24px'
-                                                active={activeItem == 'Saved'}
-                                            />
+                                            <SavedIcon height='24px' active={activeItem == 'Saved'} />
                                         </IconContainer>
                                         <NavLinkTextContainer>
                                             <NavLinkText>Guardados</NavLinkText>
@@ -173,10 +155,7 @@ const Navbar = () => {
                                         className={activeItem == 'Lists' ? 'active' : ''}
                                     >
                                         <IconContainer>
-                                            <ListIcon
-                                                height='24px'
-                                                active={activeItem == 'Lists'}
-                                            />
+                                            <ListIcon height='24px' active={activeItem == 'Lists'} />
                                         </IconContainer>
                                         <NavLinkTextContainer>
                                             <NavLinkText>Listas</NavLinkText>
@@ -189,10 +168,7 @@ const Navbar = () => {
                                         className={activeItem == 'Profile' ? 'active' : ''}
                                     >
                                         <IconContainer>
-                                            <ProfileIcon
-                                                height='24px'
-                                                active={activeItem == 'Profile'}
-                                            />
+                                            <ProfileIcon height='24px' active={activeItem == 'Profile'} />
                                         </IconContainer>
                                         <NavLinkTextContainer>
                                             <NavLinkText>Perfil</NavLinkText>
@@ -200,10 +176,7 @@ const Navbar = () => {
                                     </NavLinkContentWrapper>
                                 </NavLink>
                                 <NavLink dissapearOnMobile>
-                                    <NavLinkContentWrapper
-                                        onClick={(event) => handleClick(event, 'MoreOptions')}
-                                        className={activeItem == 'MoreOptions' ? 'active' : ''}
-                                    >
+                                    <NavLinkContentWrapper onClick={openModal}>
                                         <IconContainer>
                                             <MoreOptionsIcon height='24px' />
                                         </IconContainer>
@@ -229,9 +202,7 @@ const Navbar = () => {
                                         </UserFullNameContainer>
                                     </UserFullNameContainer>
                                     <UsernameContainer>
-                                        <UsernameText>
-                                            @Jorgerojas26666666666666666666666666666666666666666666666666666666666
-                                        </UsernameText>
+                                        <UsernameText>@Jorgerojas26666666666666666666666666666666666666666666666666666666666</UsernameText>
                                     </UsernameContainer>
                                 </UserInfoContainer>
                             </UserIDWrapper>

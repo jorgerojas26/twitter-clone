@@ -8,8 +8,9 @@ export const StyledModal = styled.div`
     left: 0;
 
     ${(props) =>
-        props.backdropShadow &&
+        props.backdrop &&
         `
     background: rgba(0, 0, 0, 0.4);
     `}
+    z-index: 2;
 `;

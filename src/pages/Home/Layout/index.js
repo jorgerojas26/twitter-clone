@@ -56,6 +56,7 @@ export const Main = styled.main`
         align-items: flex-start;
         width: auto;
     }
+    position: relative;
 `;
 
 export const MainWrapper = styled.div`
@@ -90,6 +91,9 @@ export const TimelineHeaderWrapper = styled.div`
     height: 50px;
     border-bottom: 1px solid ${colors.extraLightGray};
     padding: 0 15px;
+
+    position: sticky;
+    top: -0.5px;
 `;
 
 export const TimelineHeaderContainer = styled.div`
@@ -172,4 +176,31 @@ export const Layout = styled.div`
     @media (min-width: ${breakpoints.mobile}) {
         flex-direction: row;
     }
+`;
+
+export const HeaderHelpMenuWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 7px;
+    right: 0;
+    left: 0;
+
+    margin-right: 10px;
+    margin-left: auto;
+
+    box-shadow: rgb(101 119 134 / 20%) 0px 0px 15px, rgb(101 119 134 / 15%) 0px 0px 3px 1px;
+    background: white;
+
+    max-height: calc(100vh - 7px);
+    max-width: calc(366px);
+
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    overflow: hidden;
+
+    border-radius: 4px;
+    box-shadow: rgb(101 119 134 / 20%) 0px 0px 15px, rgb(101 119 134 / 15%) 0px 0px 3px 1px;
+
+    z-index: 3;
 `;

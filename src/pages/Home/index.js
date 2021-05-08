@@ -19,11 +19,13 @@ import {
     MainSeparator,
     DoTwittBox,
     TwittListContainer,
+    HeaderHelpMenuWrapper,
 } from './Layout';
 
 import { StarsIcon } from 'components/Svg';
 
 import { colors } from 'styles/theme';
+import HeaderHelpMenu from 'components/HeaderHelpMenu';
 
 const Home = () => {
     const [showModal, setShowModal] = useState(false);
@@ -58,6 +60,11 @@ const Home = () => {
                                         </HelpIconContainer>
                                     </HelpIconWrapper>
                                 </TimelineHeaderContainer>
+                                <Modal show={showModal} close={closeModal}>
+                                    <HeaderHelpMenuWrapper>
+                                        <HeaderHelpMenu />
+                                    </HeaderHelpMenuWrapper>
+                                </Modal>
                             </TimelineHeaderWrapper>
                             <DoTwittBox></DoTwittBox>
                             <TwittListContainer>Twitt List</TwittListContainer>
@@ -66,9 +73,6 @@ const Home = () => {
                     </MainSeparator>
                 </MainWrapper>
             </Main>
-            <Modal show={showModal} close={closeModal}>
-                {/*Modal child component*/}
-            </Modal>
         </Layout>
     );
 };
