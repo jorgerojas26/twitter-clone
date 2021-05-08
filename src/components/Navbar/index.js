@@ -51,6 +51,7 @@ import NavMenu from 'components/NavMenu';
 
 const Navbar = () => {
     const [showModal, setShowModal] = useState(false);
+    const [activeItem, setActiveItem] = useState('Home');
 
     const openModal = () => {
         setShowModal(true);
@@ -58,6 +59,14 @@ const Navbar = () => {
 
     const closeModal = () => {
         setShowModal(false);
+    };
+
+    const handleClick = (event, elementId) => {
+        setActiveItem(elementId);
+
+        if (elementId === 'MoreOptions') {
+            openModal();
+        }
     };
 
     return (
@@ -75,9 +84,15 @@ const Navbar = () => {
                         <NavContainer>
                             <Nav>
                                 <NavLink>
-                                    <NavLinkContentWrapper>
+                                    <NavLinkContentWrapper
+                                        onClick={(event) => handleClick(event, 'Home')}
+                                        className={activeItem === 'Home' ? 'active' : ''}
+                                    >
                                         <IconContainer>
-                                            <HomeIcon fill='transparent' stroke='black' height='24px' />
+                                            <HomeIcon
+                                                height='24px'
+                                                active={activeItem === 'Home'}
+                                            />
                                         </IconContainer>
                                         <NavLinkTextContainer>
                                             <NavLinkText>Inicio</NavLinkText>
@@ -85,10 +100,19 @@ const Navbar = () => {
                                     </NavLinkContentWrapper>
                                 </NavLink>
                                 <NavLink>
-                                    <NavLinkContentWrapper>
+                                    <NavLinkContentWrapper
+                                        onClick={(event) => handleClick(event, 'Explore')}
+                                        className={activeItem == 'Explore' ? 'active' : ''}
+                                    >
                                         <IconContainer iconVariant>
-                                            <ExploreIcon fill='transparent' stroke='black' height='24px' />
-                                            <HashtagIcon fill='transparent' stroke='black' height='24px' />
+                                            <ExploreIcon
+                                                height='24px'
+                                                active={activeItem == 'Explore'}
+                                            />
+                                            <HashtagIcon
+                                                height='24px'
+                                                active={activeItem == 'Explore'}
+                                            />
                                         </IconContainer>
                                         <NavLinkTextContainer>
                                             <NavLinkText>Explorar</NavLinkText>
@@ -96,9 +120,15 @@ const Navbar = () => {
                                     </NavLinkContentWrapper>
                                 </NavLink>
                                 <NavLink>
-                                    <NavLinkContentWrapper>
+                                    <NavLinkContentWrapper
+                                        onClick={(event) => handleClick(event, 'Notifications')}
+                                        className={activeItem == 'Notifications' ? 'active' : ''}
+                                    >
                                         <IconContainer>
-                                            <BellIcon fill='transparent' stroke='black' height='24px' />
+                                            <BellIcon
+                                                height='24px'
+                                                active={activeItem === 'Notifications'}
+                                            />
                                         </IconContainer>
                                         <NavLinkTextContainer>
                                             <NavLinkText>Notificaciones</NavLinkText>
@@ -106,9 +136,15 @@ const Navbar = () => {
                                     </NavLinkContentWrapper>
                                 </NavLink>
                                 <NavLink>
-                                    <NavLinkContentWrapper>
+                                    <NavLinkContentWrapper
+                                        onClick={(event) => handleClick(event, 'Messages')}
+                                        className={activeItem == 'Messages' ? 'active' : ''}
+                                    >
                                         <IconContainer>
-                                            <MessageIcon fill='transparent' stroke='black' height='24px' />
+                                            <MessageIcon
+                                                height='24px'
+                                                active={activeItem === 'Messages'}
+                                            />
                                         </IconContainer>
                                         <NavLinkTextContainer>
                                             <NavLinkText>Mensajes</NavLinkText>
@@ -116,9 +152,15 @@ const Navbar = () => {
                                     </NavLinkContentWrapper>
                                 </NavLink>
                                 <NavLink dissapearOnMobile>
-                                    <NavLinkContentWrapper>
+                                    <NavLinkContentWrapper
+                                        onClick={(event) => handleClick(event, 'Saved')}
+                                        className={activeItem == 'Saved' ? 'active' : ''}
+                                    >
                                         <IconContainer>
-                                            <SavedIcon height='24px' />
+                                            <SavedIcon
+                                                height='24px'
+                                                active={activeItem == 'Saved'}
+                                            />
                                         </IconContainer>
                                         <NavLinkTextContainer>
                                             <NavLinkText>Guardados</NavLinkText>
@@ -126,9 +168,15 @@ const Navbar = () => {
                                     </NavLinkContentWrapper>
                                 </NavLink>
                                 <NavLink dissapearOnMobile>
-                                    <NavLinkContentWrapper>
+                                    <NavLinkContentWrapper
+                                        onClick={(event) => handleClick(event, 'Lists')}
+                                        className={activeItem == 'Lists' ? 'active' : ''}
+                                    >
                                         <IconContainer>
-                                            <ListIcon height='24px' />
+                                            <ListIcon
+                                                height='24px'
+                                                active={activeItem == 'Lists'}
+                                            />
                                         </IconContainer>
                                         <NavLinkTextContainer>
                                             <NavLinkText>Listas</NavLinkText>
@@ -136,9 +184,15 @@ const Navbar = () => {
                                     </NavLinkContentWrapper>
                                 </NavLink>
                                 <NavLink dissapearOnMobile>
-                                    <NavLinkContentWrapper>
+                                    <NavLinkContentWrapper
+                                        onClick={(event) => handleClick(event, 'Profile')}
+                                        className={activeItem == 'Profile' ? 'active' : ''}
+                                    >
                                         <IconContainer>
-                                            <ProfileIcon height='24px' />
+                                            <ProfileIcon
+                                                height='24px'
+                                                active={activeItem == 'Profile'}
+                                            />
                                         </IconContainer>
                                         <NavLinkTextContainer>
                                             <NavLinkText>Perfil</NavLinkText>
@@ -146,7 +200,10 @@ const Navbar = () => {
                                     </NavLinkContentWrapper>
                                 </NavLink>
                                 <NavLink dissapearOnMobile>
-                                    <NavLinkContentWrapper onClick={openModal}>
+                                    <NavLinkContentWrapper
+                                        onClick={(event) => handleClick(event, 'MoreOptions')}
+                                        className={activeItem == 'MoreOptions' ? 'active' : ''}
+                                    >
                                         <IconContainer>
                                             <MoreOptionsIcon height='24px' />
                                         </IconContainer>
@@ -172,7 +229,9 @@ const Navbar = () => {
                                         </UserFullNameContainer>
                                     </UserFullNameContainer>
                                     <UsernameContainer>
-                                        <UsernameText>@Jorgerojas26666666666666666666666666666666666666666666666666666666666</UsernameText>
+                                        <UsernameText>
+                                            @Jorgerojas26666666666666666666666666666666666666666666666666666666666
+                                        </UsernameText>
                                     </UsernameContainer>
                                 </UserInfoContainer>
                             </UserIDWrapper>

@@ -168,8 +168,8 @@ export const NavLink = styled.a`
     ${(props) =>
         props.dissapearOnMobile &&
         `
-@media (max-width: ${breakpoints.mobile}){
-display: none;
+        @media (max-width: ${breakpoints.mobile}){
+        display: none;
 }
     `}
 `;
@@ -200,31 +200,6 @@ export const IconContainer = styled.div`
     }}
 `;
 
-export const NavLinkContentWrapper = styled.div`
-    display: flex:
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    max-width: 100%;
-    padding: 11px;
-    border-radius: 9999px;
-    transition-property: background-color, box-shadow;
-    transition-duration: 0.2s;
-
-    :hover {
-        background: ${colors.lightPrimary};
-        color: ${colors.primary}
-        
-    }
-
-    :hover ${IconContainer}{
-        > svg {
-            stroke: ${colors.primary};
-            stroke-width: 1px;
-        }
-    }
-`;
-
 export const NavLinkTextContainer = styled.div`
     line-height: 23px;
     font-size: 19px;
@@ -246,6 +221,41 @@ export const NavLinkTextContainer = styled.div`
 
 export const NavLinkText = styled.span`
     overflow-wrap: break-word;
+`;
+
+export const NavLinkContentWrapper = styled.div`
+    display: flex:
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 100%;
+    padding: 11px;
+    border-radius: 9999px;
+    transition-property: background-color, box-shadow;
+    transition-duration: 0.2s;
+
+    :hover {
+        background: ${colors.lightPrimary};
+        color: ${colors.primary}
+        
+    }
+
+    :hover ${IconContainer}{
+        > svg {
+            color: ${colors.primary};
+        }
+    }
+
+    &.active {
+        > ${IconContainer} svg {
+            fill: ${colors.primary};
+        }
+
+        > ${NavLinkTextContainer} {
+            color: ${colors.primary};
+        }
+    }
+
 `;
 
 export const ProfileMenuWrapper = styled.div`
@@ -347,14 +357,13 @@ export const NavMenuWrapper = styled.div`
     flex-direction: column;
     flex-grow: 1;
     position: fixed;
-    top: 48px;
+    top: 70px;
     background: white;
     box-shadow: ${colors.shadow} 0px 0px 15px, ${colors.shadow} 0px 0px 3px 1px;
     border-radius: 4px;
 
     max-height: calc(100vh -48px);
-    max-width: 336px;
-    width: 223.44px;
+    width: 240px;
     overscroll-behavior: contain;
     overflow-y: auto;
     overflow: hidden;
