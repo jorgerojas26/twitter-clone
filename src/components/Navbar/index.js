@@ -26,7 +26,8 @@ import {
     UserFullNameText,
     UsernameText,
     ThreeDotsIconContainer,
-    NavMenuWrapper,
+    NavMenuModalWrapper,
+    ProfileMenuModalWrapper,
 } from './styles';
 
 import {
@@ -50,22 +51,17 @@ import Modal from 'components/Modal';
 import NavMenu from 'components/NavMenu';
 
 const Navbar = () => {
-    const [showModal, setShowModal] = useState(false);
+    const [showNavMenuModal, setShowNavMenuModal] = useState(false);
+    const [showProfileMenuModal, setShowProfileMenuModal] = useState(false);
     const [activeItem, setActiveItem] = useState('Home');
-
-    const openModal = () => {
-        setShowModal(true);
-    };
-
-    const closeModal = () => {
-        setShowModal(false);
-    };
 
     const handleClick = (event, elementId) => {
         setActiveItem(elementId);
 
         if (elementId === 'MoreOptions') {
-            openModal();
+            setShowNavMenuModal(true);
+        } else if (elementId === 'ProfileMenu') {
+            setShowProfileMenuModal(true);
         }
     };
 
@@ -176,7 +172,7 @@ const Navbar = () => {
                                     </NavLinkContentWrapper>
                                 </NavLink>
                                 <NavLink dissapearOnMobile>
-                                    <NavLinkContentWrapper onClick={openModal}>
+                                    <NavLinkContentWrapper onClick={(event) => handleClick(event, 'MoreOptions')}>
                                         <IconContainer>
                                             <MoreOptionsIcon height='24px' />
                                         </IconContainer>
@@ -192,7 +188,7 @@ const Navbar = () => {
                         </DoTwittButtonContainer>
                     </NavWrapper>
                     <ProfileMenuWrapper>
-                        <ProfileMenuContainer>
+                        <ProfileMenuContainer onClick={(event) => handleClick(event, 'ProfileMenu')}>
                             <AvatarContainer></AvatarContainer>
                             <UserIDWrapper>
                                 <UserInfoContainer>
@@ -213,10 +209,13 @@ const Navbar = () => {
                     </ProfileMenuWrapper>
                 </NavProfileSeparator>
             </MainWrapper>
-            <Modal show={showModal} close={closeModal}>
-                <NavMenuWrapper>
+            <Modal show={showNavMenuModal} close={() => setShowNavMenuModal(false)}>
+                <NavMenuModalWrapper>
                     <NavMenu />
-                </NavMenuWrapper>
+                </NavMenuModalWrapper>
+            </Modal>
+            <Modal show={showProfileMenuModal} close={() => setShowProfileMenuModal(false)}>
+                <ProfileMenuModalWrapper>Profile Menu Modal</ProfileMenuModalWrapper>
             </Modal>
         </WidthManager>
     );

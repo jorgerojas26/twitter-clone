@@ -355,7 +355,7 @@ export const ThreeDotsIconContainer = styled.div`
     }
 `;
 
-export const NavMenuWrapper = styled.div`
+export const NavMenuModalWrapper = styled.div`
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -371,4 +371,14 @@ export const NavMenuWrapper = styled.div`
     overflow-y: auto;
     overflow: hidden;
     z-index: 3;
+`;
+
+export const ProfileMenuModalWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 81px;
+    background: white;
+    min-height: 200px;
+    min-width: 200px;
 `;

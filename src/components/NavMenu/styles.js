@@ -59,14 +59,16 @@ export const LinkTextContainer = styled.div`
     min-width: 0px;
     max-width: 100%;
     margin-left: 20px;
-`;
 
-export const LinkText = styled.span`
     line-height: 19px;
     overflow-wrap: break-word;
     text-overflow: ellipsis;
-    white-space: nowrap;
+    white-space: pre-wrap;
     overflow: hidden;
+`;
+
+export const LinkText = styled.span`
+    overflow-wrap: break-word;
     min-width: 0px;
     max-width: 100%;
 `;
